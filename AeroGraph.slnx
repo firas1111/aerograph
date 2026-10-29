@@ -1,0 +1,8 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/AeroGraph.Api/AeroGraph.Api.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/AeroGraph.Tests/AeroGraph.Tests.csproj" />
+  </Folder>
+</Solution>

@@ -1,0 +1,25 @@
+@AeroGraph.Api_HostAddress = http://localhost:5243
+
+### Import summary
+GET {{AeroGraph.Api_HostAddress}}/stats
+
+### One airport
+GET {{AeroGraph.Api_HostAddress}}/airports/TLS
+
+### Search by code, name or city
+GET {{AeroGraph.Api_HostAddress}}/airports?search=paris&limit=5
+
+### Direct flights from an airport
+GET {{AeroGraph.Api_HostAddress}}/airports/TLS/destinations
+
+### Fewest-stops trip (Toulouse to Nouméa: 2 stops)
+GET {{AeroGraph.Api_HostAddress}}/routes?from=TLS&to=NOU
+
+### Trip with a stop limit (404 when even the shortest trip has more stops)
+GET {{AeroGraph.Api_HostAddress}}/routes?from=TLS&to=NOU&maxStops=1
+
+### 404: unknown airport
+GET {{AeroGraph.Api_HostAddress}}/airports/ZZZ
+
+### 400: badly formed code
+GET {{AeroGraph.Api_HostAddress}}/airports/TOULOUSE
